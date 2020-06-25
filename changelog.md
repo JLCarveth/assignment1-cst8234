@@ -1,0 +1,24 @@
+## Changelog
+- v0.1.0 - 2020-06-10
+    - Initial version.
+- 0.1.5 - 2020-06-17  
+    - Renamed info module to io
+    - Implemented getMaxCourses(int n)
+- 0.1.6 - 2020-06-17
+    - Implemented getNStudents(int n);
+- 0.1.9 - 2020-06-22
+    - Implemented getNCourses(int n);
+    - Implemented flush(), to handle extraneous user inputs
+- 0.2.0 - 2020-06-22
+    - Implemented printMainLoop();
+    - Implemented getAction();
+        - Prompts the user for an int between 1 and 4
+- 0.2.4 - 2020-06-24
+    - Implemented `registration` module
+        - `int * initializeTable(int students, int courses);`
+    - Implemented `int getValue(int * table, int s, int c);`
+        - Retrieves the value from the registration table at the given indexes. Returns -1 if s or c are out of bounds.
+    - Implemented `void setValue (int * table, int s, int c, int value);`
+        - Assigns value to the proper position within table
+        - Returns without assignment if s or c are out of bounds
+    

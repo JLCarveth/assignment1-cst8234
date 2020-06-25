@@ -1,0 +1,1 @@
+char* repeatChar (char c, int n);

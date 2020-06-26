@@ -21,4 +21,7 @@
     - Implemented `void setValue (int * table, int s, int c, int value);`
         - Assigns value to the proper position within table
         - Returns without assignment if s or c are out of bounds
+- 1.0.0 - 2020-06-26
+    - Initial version of final submission
+    - Implemented logic to register and drop users
     

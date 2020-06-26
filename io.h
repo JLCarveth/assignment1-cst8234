@@ -1,6 +1,6 @@
-#define MAJOR_VERSION 0
-#define MINOR_VERSION 2
-#define PATCH_VERSION 4
+#define MAJOR_VERSION 1
+#define MINOR_VERSION 0
+#define PATCH_VERSION 0
 
 // static strings to be printed to the console
 #define WELCOME_MSG "Welcome to the Student Information and Registration System (SIRS)"
@@ -15,12 +15,20 @@
 #define ACTION_QUIT "4. Quit"
 #define ACTION_PROMPT "Please enter the number cooresponding to the desired action: "
 #define INVALID_INPUT "Invalid input."
+#define PROMPT_STUDENT "Please enter the student ID: "
+#define PROMPT_COURSE "Please enter the course code: "
+#define STUDENT_NOT_FOUND "Student with ID %d could not be found."
+#define COURSE_NOT_FOUND "Course %s could not be found."
 // Functions to gather user input
 int getMaxStudents();
 int * getNStudents();
 int getMaxCourses();
 char ** getNCourses();
 int getAction();
+int indexOfInt(int * array, int size, int value);
+int indexOfString(char ** array, int size, char * value);
+char * getCourseCode();
+int getStudentID();
 // Functions to output information to the user
 void printInfo();
 void printMainLoop();

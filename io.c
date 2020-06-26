@@ -1,11 +1,16 @@
 /*
 Module manages input and output operations
 
+Potential improvements:
+    - Generify some of the methods, for DRY principles.
+        - Ex. single method to get string input of length n, same for int
+
     Author:
         - John L. Carveth <jlcarveth@gmail.com>
 */
 #include <stdio.h>
 #include <stdlib.h>
+#include <strings.h>
 
 #include "io.h"
 #include "format.h"
@@ -51,6 +56,23 @@ int getMaxCourses() {
     return max;
 }
 
+int getStudentID() {
+    int studentID;
+    printf(PROMPT_STUDENT);
+    scanf("%5d", &studentID);
+    flush();
+    return studentID;
+}
+
+// Get a 7-digit course code from the user
+char * getCourseCode() {
+    printf(PROMPT_COURSE);
+    char * courseCode = malloc(8);
+    scanf("%7s", courseCode);
+    flush();
+    return courseCode;
+}
+
 // Get n 5-digit student IDs from the user
 // Longer inputs will be truncated
 int * getNStudents(int n) {
@@ -89,6 +111,29 @@ int getAction() {
     }
 
     return input;
+}
+
+// Returns the index of given value within array,
+// or -1 if no such value was found
+int indexOfInt(int * array, int size, int value) {
+    int i;
+    for (i = 0; i < size; i++) {
+        if (value == array[i]) {
+            return i;
+        }
+    }
+    return -1;
+}
+// Returns the index of the given value within the array,
+// or -1 if no such string is found
+int indexOfString(char ** array, int size, char * value) {
+    int i;
+    for (int i=0; i<size; i++) {
+        if (strcmp(array[i], value) == 0) {
+            return i;
+        }
+    }
+    return -1;
 }
 
 // Clears input streams of extraneous input

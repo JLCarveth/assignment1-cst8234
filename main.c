@@ -51,22 +51,46 @@ int main() {
     
         //register student in a course
     	if(action == 1) {
-            //TODO
-            // get student id
-            // get course id
-            // get index of both
-            // set registrationTable value to 1
-            printf("Register...\n");
+            printf(PROMPT_STUDENT);
+            int studentID = getStudentID();
+            int studentIndex = indexOfInt(pStudents, MAX_STUDENTS, studentID);
+            while (studentIndex == -1) {
+                printf(STUDENT_NOT_FOUND"\n", studentID);
+                studentID = getStudentID();
+                studentIndex = indexOfInt(pStudents, MAX_STUDENTS, studentID);
+            }
+
+            char * courseCode = getCourseCode();
+            int courseIndex = indexOfString(pCourses, MAX_COURSES, courseCode);
+            while (courseIndex == -1) {
+                printf(COURSE_NOT_FOUND"\n", courseCode);
+                courseCode = getCourseCode();
+                courseIndex = indexOfString(pCourses, MAX_COURSES, courseCode);
+            }
+
+            setValue(registrationTable, studentIndex, courseIndex, 1);
     	}
 
     	//drop a student's course
     	else if (action ==2 ) {
-            //TODO
-            // get student id
-            // get course id
-            // get index of both
-            // set registrationTable value to 0
-            printf("Drop...\n");
+            printf(PROMPT_STUDENT);
+            int studentID = getStudentID();
+            int studentIndex = indexOfInt(pStudents, MAX_STUDENTS, studentID);
+            while (studentIndex == -1) {
+                printf(STUDENT_NOT_FOUND"\n", studentID);
+                studentID = getStudentID();
+                studentIndex = indexOfInt(pStudents, MAX_STUDENTS, studentID);
+            }
+
+            char * courseCode = getCourseCode();
+            int courseIndex = indexOfString(pCourses, MAX_COURSES, courseCode);
+            while (courseIndex == -1) {
+                printf(COURSE_NOT_FOUND"\n", courseCode);
+                courseCode = getCourseCode();
+                courseIndex = indexOfString(pCourses, MAX_COURSES, courseCode);
+            }
+
+            setValue(registrationTable, studentIndex, courseIndex, 0);
     	}
 
     	//print registration table

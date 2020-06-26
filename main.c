@@ -2,6 +2,9 @@
 CST 8234
 Assignment 1
 
+Checkout this project on GitHub!
+    https://github.com/jlcarveth/assignment1-cst8234
+
     Author(s):
         - John L. Carveth (040937145) <jlcarveth@gmail.com>
 */
@@ -72,6 +75,8 @@ int main() {
     	}
 
     	//drop a student's course
+        // TODO: This code block is duplicated from abover
+        // extract to it's own method
     	else if (action ==2 ) {
             printf(PROMPT_STUDENT);
             int studentID = getStudentID();

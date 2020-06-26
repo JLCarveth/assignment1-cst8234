@@ -1,0 +1,93 @@
+Script started on Fri Jun 26 13:28:02 2020
+[1m[7m%[27m[1m[0m                                                                                                                                                            [0m[27m[24m[Jjohnny@Jimmys-MacBook-Air fixed-a1 % [K[?2004hlls -al[?2004l
+total 216
+drwxr-xr-x  24 johnny  staff    768 Jun 26 13:28 .
+drwxr-xr-x@  5 johnny  staff    160 Jun 25 18:48 ..
+-rw-r--r--@  1 johnny  staff   6148 Jun 25 21:19 .DS_Store
+drwxr-xr-x  14 johnny  staff    448 Jun 26 10:26 .git
+-rw-r--r--   1 johnny  staff     39 Jun 25 18:56 .gitignore
+-rw-r--r--   1 johnny  staff     95 Jun 26 10:13 README.md
+-rw-r--r--   1 johnny  staff   1093 Jun 26 10:12 changelog.md
+-rw-r--r--@  1 johnny  staff    353 Jun 25 18:27 format.c
+-rw-r--r--@  1 johnny  staff     33 Jun 25 18:27 format.h
+-rw-r--r--   1 johnny  staff    728 Jun 26 13:23 format.o
+-rw-r--r--@  1 johnny  staff   1839 Jun 25 18:48 helper.c
+-rw-r--r--@  1 johnny  staff    317 Jun 25 18:27 helper.h
+-rw-r--r--   1 johnny  staff   2044 Jun 26 13:23 helper.o
+-rw-r--r--@  1 johnny  staff   3220 Jun 26 10:02 io.c
+-rw-r--r--@  1 johnny  staff   1529 Jun 26 10:13 io.h
+-rw-r--r--   1 johnny  staff   4640 Jun 26 13:23 io.o
+-rwxr-xr-x   1 johnny  staff  18256 Jun 26 13:23 main
+-rw-r--r--@  1 johnny  staff   3491 Jun 26 13:27 main.c
+-rw-r--r--   1 johnny  staff   2780 Jun 26 13:23 main.o
+-rw-r--r--   1 johnny  staff    183 Jun 25 18:27 makefile
+-rw-r--r--@  1 johnny  staff   1399 Jun 26 13:27 registration.c
+-rw-r--r--@  1 johnny  staff    145 Jun 25 18:27 registration.h
+-rw-r--r--   1 johnny  staff   1420 Jun 26 13:23 registration.o
+-rw-r--r--   1 johnny  staff     43 Jun 26 13:28 typescript
+[1m[7m%[27m[1m[0m                                                                                                                                                            [0m[27m[24m[Jjohnny@Jimmys-MacBook-Air fixed-a1 % [K[?2004hmmake clean[?2004l
+rm main main.o format.o io.o helper.o registration.o
+[1m[7m%[27m[1m[0m                                                                                                                                                            [0m[27m[24m[Jjohnny@Jimmys-MacBook-Air fixed-a1 % [K[?2004hmmake[?2004l
+cc    -c -o main.o main.c
+cc    -c -o format.o format.c
+cc    -c -o io.o io.c
+cc    -c -o helper.o helper.c
+cc    -c -o registration.o registration.c
+cc -o main main.o format.o io.o helper.o registration.o
+[1m[7m%[27m[1m[0m                                                                                                                                                            [0m[27m[24m[Jjohnny@Jimmys-MacBook-Air fixed-a1 % [K[?2004h../main[?2004l
+****************************************************************************************************
+Welcome to the Student Information and Registration System (SIRS)
+Version:  1.0.0
+****************************************************************************************************
+How many students do you wish to register? 3
+Please enter the ID for student 1: 
+12345
+Please enter the ID for student 2: 
+34567
+Please enter the ID for student 3: 
+56789
+[12345, 34567, 56789]
+How many courses are you offering? 2
+Please enter the 7-digit course code for course 1: 
+CST8234
+Please enter the 7-digit course code for course 2: 
+CST8238
+[CST8234, CST8238]
+Please choose one of the following actions: 
+	1. Register a student in a course
+	2. Drop a student's course
+	3. Print registration table
+	4. Quit
+Please enter the number cooresponding to the desired action: 1
+Please enter the student ID: Please enter the student ID: 28172
+Student with ID 28172 could not be found.
+Please enter the student ID: 31321
+Student with ID 31321 could not be found.
+Please enter the student ID: 34567
+Please enter the course code: CST6162
+Course CST6162 could not be found.
+Please enter the course code: CST813  234
+[ [ 0, 0 ], [ 0, 1 ], [ 0, 0 ] ]
+Please enter the number cooresponding to the desired action: 1
+Please enter the student ID: Please enter the student ID: 12345
+Please enter the course code: CST8238
+[ [ 0, 1 ], [ 0, 1 ], [ 0, 0 ] ]
+Please enter the number cooresponding to the desired action: 1
+Please enter the student ID: Please enter the student ID: 34567
+Please enter the course code: CST8238
+[ [ 0, 1 ], [ 0, 1 ], [ 1, 0 ] ]
+Please enter the number cooresponding to the desired action: 3
+[ [ 0, 1 ], [ 0, 1 ], [ 1, 0 ] ]
+Please enter the number cooresponding to the desired action: 2
+Please enter the student ID: Please enter the student ID: 12345
+Please enter the course code: CST8238
+[ [ 0, 0 ], [ 0, 1 ], [ 1, 0 ] ]
+Please enter the number cooresponding to the desired action: q
+Please enter the number cooresponding to the desired action: 6
+Please enter the number cooresponding to the desired action: 0
+Please enter the number cooresponding to the desired action: 3
+[ [ 0, 0 ], [ 0, 1 ], [ 1, 0 ] ]
+Please enter the number cooresponding to the desired action: 4
+[1m[7m%[27m[1m[0m                                                                                                                                                            [0m[27m[24m[Jjohnny@Jimmys-MacBook-Air fixed-a1 % [K[?2004heexit[?2004l
+
+Script done on Fri Jun 26 13:30:22 2020

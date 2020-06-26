@@ -24,4 +24,7 @@
 - 1.0.0 - 2020-06-26
     - Initial version of final submission
     - Implemented logic to register and drop users
+- 1.0.2 - 2020-06-26
+    - Fixed setValue() and getValue() bound checks
+    - Added typescript test file
     

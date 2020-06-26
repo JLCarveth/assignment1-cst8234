@@ -1,12 +1,22 @@
 /*
-CST 8234
-Assignment 1
+Title: Assignment 1 - Student Registration System
+Course: CST8234 - C Language
 
 Checkout this project on GitHub!
     https://github.com/jlcarveth/assignment1-cst8234
 
     Author(s):
         - John L. Carveth (040937145) <jlcarveth@gmail.com>
+
+    Status:
+        Requirement #1      completed
+        Requirement #2      completed
+        Requirement #3      completed
+        Requirement #4      completed
+        Requirement #5      completed
+        Requirement #6      completed
+        Requirement #7      completed
+        Requirement #8      completed
 */
 
 #include <stdio.h>
@@ -72,6 +82,7 @@ int main() {
             }
 
             setValue(registrationTable, studentIndex, courseIndex, 1);
+            print2DArray(registrationTable, MAX_STUDENTS, MAX_COURSES);
     	}
 
     	//drop a student's course
@@ -96,6 +107,7 @@ int main() {
             }
 
             setValue(registrationTable, studentIndex, courseIndex, 0);
+            print2DArray(registrationTable, MAX_STUDENTS, MAX_COURSES);
     	}
 
     	//print registration table

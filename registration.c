@@ -34,7 +34,7 @@ int * initializeTable (int students, int courses) {
 // Returns the value of the given position
 // Returns -1 if coordinates out of bounds
 int getValue (int * table, int s, int c) {
-    if (s < 1 || s > MAX_STUDENTS || c < 1 || c > MAX_COURSES) {
+    if (s < 0 || s > MAX_STUDENTS-1 || c < 0 || c > MAX_COURSES-1) {
         return -1;
     }
     return *(table + s*MAX_STUDENTS + c);
@@ -42,7 +42,7 @@ int getValue (int * table, int s, int c) {
 
 // Inserts value into the given position of table
 void setValue (int * table, int s, int c, int value) {
-    if (s < 1 || s > MAX_STUDENTS || c < 1 || c > MAX_COURSES) {
+    if (s < 0 || s > MAX_STUDENTS-1 || c < 0 || c > MAX_COURSES-1) {
         return;
     }
     *(table + s*MAX_STUDENTS + c) = value;
